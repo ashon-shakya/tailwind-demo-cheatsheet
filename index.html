@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tailwind CSS Utility Classes Cheatsheet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for cheatsheet layout with Dented Code Academy theme */
+        .cheatsheet-section {
+            border-bottom: 1px solid #1e40af;
+            /* Blue border matching logo */
+            padding: 1.5rem 0;
+        }
+
+        .cheatsheet-section:last-child {
+            border-bottom: none;
+        }
+
+        .example-box {
+            border: 1px solid #1e40af;
+            /* Blue border */
+            padding: 1rem;
+            border-radius: 0.5rem;
+            background-color: #1f2937;
+            /* Dark gray background */
+            color: #e5e7eb;
+            /* Light gray text for contrast */
+        }
+    </style>
+</head>
+
+<body class="bg-black min-h-screen p-8 font-sans">
+    <!-- Body Styling: Black background matching logo, full height, padded -->
+    <!-- bg-black: Black background -->
+    <!-- min-h-screen: Full viewport height -->
+    <!-- p-8: Padding around content -->
+    <!-- font-sans: Clean sans-serif font -->
+
+    <div class="max-w-4xl mx-auto bg-gray-900 rounded-xl shadow-lg p-8">
+        <!-- Container: Centered, dark gray, rounded, shadowed -->
+        <!-- max-w-4xl: Limits width for readability -->
+        <!-- mx-auto: Centers horizontally -->
+        <!-- bg-gray-900: Dark gray background matching logo -->
+        <!-- rounded-xl: Extra-large rounded corners -->
+        <!-- shadow-lg: Large shadow for depth -->
+        <!-- p-8: Internal padding -->
+
+        <div class="text-center mb-8">
+            <img src="logo.png" alt="Dented Code Academy Logo" class="mx-auto mb-4 w-48">
+            <!-- Logo: Centered, sized appropriately -->
+            <!-- Replace src with actual logo URL, e.g., src="path/to/dented-code-academy-logo.png" -->
+            <!-- mx-auto: Centers image -->
+            <!-- mb-4: Bottom margin -->
+            <!-- w-48: Sets width to 12rem -->
+        </div>
+
+        <h1 class="text-3xl font-bold text-red-500 mb-6">Tailwind CSS Utility Classes Cheatsheet</h1>
+        <!-- Title: Large, bold, red matching logo -->
+        <!-- text-3xl: Extra-large font size -->
+        <!-- font-bold: Bold font weight -->
+        <!-- text-red-500: Red color from logo -->
+        <!-- mb-6: Bottom margin -->
+
+        <p class="text-gray-300 mb-8">This cheatsheet explains key Tailwind CSS utility classes with examples, based on
+            a card component design. Each class is demonstrated with a simple use case.</p>
+        <!-- Intro: Light gray text for contrast, spaced below -->
+        <!-- text-gray-300: Light gray for readability -->
+        <!-- mb-8: Larger bottom margin -->
+
+        <!-- Body Styling Classes -->
+        <div class="cheatsheet-section">
+            <h2 class="text-xl font-semibold text-blue-500 mb-4">Body Styling Classes</h2>
+            <!-- Section Title: Medium, semi-bold, blue matching logo -->
+            <!-- text-xl: Extra-large font -->
+            <!-- font-semibold: Semi-bold -->
+            <!-- text-blue-500: Blue color from logo -->
+            <!-- mb-4: Bottom margin -->
+
+            <div class="mb-4">
+                <h3 class="text-lg font-medium text-gray-100">bg-gray-900</h3>
+                <!-- Class Name: Medium, bold, light gray -->
+                <!-- text-lg: Large font -->
+                <!-- font-medium: Medium weight -->
+                <!-- text-gray-100: Light gray for contrast -->
+                <p class="text-gray-400">Sets the background color to a dark gray.</p>
+                <!-- Description: Gray text -->
+                <!-- text-gray-400: Lighter gray for contrast -->
+                <div class="example-box bg-gray-900 text-white p-4 mt-2">Dark gray background example</div>
+                <!-- Example: Dark gray background, white text -->
+                <!-- bg-gray-900: Applies dark gray -->
+                <!-- text-white: White text for contrast -->
+                <!-- p-4: Padding -->
+                <!-- mt-2: Top margin -->
+            </div>
+
+            <div class="mb-4">
+                <h3 class="text-lg font-medium text-gray-100">flex</h3>
+                <p class="text-gray-400">Enables Flexbox layout for the element.</p>
+                <div class="example-box flex p-4 mt-2">
+                    <div class="bg-blue-500 p-2 mr-2">Item 1</div>
+                    <div class="bg-blue-500 p-2">Item 2</div>
+                </div>
+                <!-- Example: Flexbox with two items -->
+                <!-- flex: Enables Flexbox -->
+                <!-- p-4: Padding -->
+                <!-- bg-blue-500: Blue background matching logo -->
+                <!-- mt-2: Top margin -->
+            </div>
+
+            <div class="mb-4">
+                <h3 class="text-lg font-medium text-gray-100">items-center</h3>
+                <p class="text-gray-400">Aligns flex items vertically to the center (used with flex).</p>
+                <div class="example-box flex items-center h-16 p-4 mt-2">
+                    <div class="bg-blue-500 p-2">Centered Item</div>
+                </div>
+                <!-- Example: Vertically centered item -->
+                <!-- flex: Enables Flexbox -->
+                <!-- items-center: Vertical centering -->
+                <!-- h-16: Fixed height for visibility -->
+                <!-- p-4: Padding -->
+                <!-- bg-blue-500: Blue background -->
+                <!-- mt-2: Top margin -->
+            </div>
+
+            <div class="mb-4">
+                <h3 class="text-lg font-medium text-gray-100">justify-center</h3>
+                <p class="text-gray-400">Aligns flex items horizontally to the center (used with flex).</p>
+                <div class="example-box flex justify-center p-4 mt-2">
+                    <div class="bg-blue-500 p-2">Centered Item</div>
+                </div>
+                <!-- Example: Horizontally centered item -->
+                <!-- flex: Enables Flexbox -->
+                <!-- justify-center: Horizontal centering -->
+                <!-- p-4: Padding -->
+                <!-- bg-blue-500: Blue background -->
+                <!-- mt-2: Top margin -->
+            </div>
+
+            <div class="mb-4">
+                <h3 class="text-lg font-medium text-gray-100">min-h-screen</h3>
+                <p class="text-gray-400">Sets the minimum height to the full viewport height.</p>
+                <div class="example-box min-h-screen bg-gray-800 p-4 mt-2">Full viewport height (simulated in container)
+                </div>
+                <!-- Example: Full height (simulated) -->
+                <!-- min-h-screen: Full viewport height -->
+                <!-- bg-gray-800: Slightly lighter dark gray -->
+                <!-- p-4: Padding -->
+                <!-- mt-2: Top margin -->
+            </div>
+
+            <div class="mb-4">
+                <h3 class="text-lg font-medium text-gray-100">p-4</h3>
+                <p class="text-gray-400">Adds padding around the element content.</p>
+                <div class="example-box p-4 bg-gray-800 mt-2">Content with 1rem padding</div>
+                <!-- Example: Padded content -->
+                <!-- p-4: 1rem padding -->
+                <!-- bg-gray-800: Dark gray background -->
+                <!-- mt-2: Top margin -->
+            </div>
+        </div>
+
+        <!-- Card Container Classes -->
+        <div class="cheatsheet-section">
+            <h2 class="text-xl font-semibold text-blue-500 mb-4">Card Container Classes</h2>
+
+            <div class="mb-4">
+                <h3 class="text-lg font-medium text-gray-100">max-w-xs</h3>
+                <p class="text-gray-400">Sets the maximum width to extra small (adjustable: max-w-sm, max-w-md).</p>
+                <div class="example-box max-w-xs bg-gray-800 p-4 mt-2">Extra small width container</div>
+                <!-- Example: Limited width -->
+                <!-- max-w-xs: Extra small max width -->
+                <!-- bg-gray-800: Dark gray background -->
+                <!-- p-4: Padding -->
+                <!-- mt-2: Top margin -->
+            </div>
+
+            <div class="mb-4">
+                <h3 class="text-lg font-medium text-gray-100">rounded-lg</h3>
+                <p class="text-gray-400">Applies large rounded corners to the element.</p>
+                <div class="example-box rounded-lg bg-gray-800 p-4 mt-2">Large rounded corners</div>
+                <!-- Example: Rounded corners -->
+                <!-- rounded-lg: Large rounded corners -->
+                <!-- bg-gray-800: Dark gray background -->
+                <!-- p-4: Padding -->
+                <!-- mt-2: Top margin -->
+            </div>
+
+            <div class="mb-4">
+                <h3 class="text-lg font-medium text-gray-100">overflow-hidden</h3>
+                <p class="text-gray-400">Prevents child elements from spilling outside rounded corners.</p>
+                <div class="example-box overflow-hidden rounded-lg p-4 mt-2">
+                    <img src="bg.jpg" class="w-full" alt="Overflow hidden">
+                </div>
+                <!-- Example: Image clipped by rounded corners -->
+                <!-- overflow-hidden: Clips overflowing content -->
+                <!-- rounded-lg: Large rounded corners -->
+                <!-- p-4: Padding -->
+                <!-- mt-2: Top margin -->
+            </div>
+
+            <div class="mb-4">
+                <h3 class="text-lg font-medium text-gray-100">shadow-lg</h3>
+                <p class="text-gray-400">Applies a large box shadow for a lifting effect.</p>
+                <div class="example-box shadow-lg bg-gray-800 p-4 mt-2">Large box shadow</div>
+                <!-- Example: Shadowed box -->
+                <!-- shadow-lg: Large shadow -->
+                <!-- bg-gray-800: Dark gray background -->
+                <!-- p-4: Padding -->
+                <!-- mt-2: Top margin -->
+            </div>
+
+            <div class="mb-4">
+                <h3 class="text-lg font-medium text-gray-100">bg-white</h3>
+                <p class="text-gray-400">Sets the background color to white.</p>
+                <div class="example-box bg-white text-gray-900 p-4 mt-2">White background</div>
+                <!-- Example: White background -->
+                <!-- bg-white: White background -->
+                <!-- text-gray-900: Dark text for contrast -->
+                <!-- p-4: Padding -->
+                <!-- mt-2: Top margin -->
+            </div>
+        </div>
+
+        <!-- Card Image Classes -->
+        <div class="cheatsheet-section">
+            <h2 class="text-xl font-semibold text-blue-500 mb-4">Card Image Classes</h2>
+
+            <div class="mb-4">
+                <h3 class="text-lg font-medium text-gray-100">w-full</h3>
+                <p class="text-gray-400">Makes the element take the full width of its container.</p>
+                <div class="example-box p-4 mt-2">
+                    <div class="w-full bg-blue-500 p-2">Full-width element</div>
+                </div>
+                <!-- Example: Full-width div -->
+                <!-- w-full: Full container width -->
+                <!-- bg-blue-500: Blue background -->
+                <!-- p-2: Padding -->
+                <!-- mt-2: Top margin -->
+            </div>
+
+            <div class="mb-4">
+                <h3 class="text-lg font-medium text-gray-100">h-48</h3>
+                <p class="text-gray-400">Sets a fixed height for the element (12rem).</p>
+                <div class="example-box p-4 mt-2">
+                    <div class="h-48 bg-blue-500"></div>
+                </div>
+                <!-- Example: Fixed height div -->
+                <!-- h-48: 12rem height -->
+                <!-- bg-blue-500: Blue background -->
+                <!-- mt-2: Top margin -->
+            </div>
+
+            <div class="mb-4">
+                <h3 class="text-lg font-medium text-gray-100">object-cover</h3>
+                <p class="text-gray-400">Scales the image to fill the container, cropping if necessary.</p>
+                <div class="example-box p-4 mt-2">
+                    <img src="bg.jpg" class="w-full h-24 object-cover" alt="Object cover">
+                </div>
+                <!-- Example: Cropped image -->
+                <!-- object-cover: Scales and crops -->
+                <!-- w-full: Full width -->
+                <!-- h-24: Fixed height -->
+                <!-- mt-2: Top margin -->
+            </div>
+        </div>
+
+        <!-- Card Content Area Classes -->
+        <div class="cheatsheet-section">
+            <h2 class="text-xl font-semibold text-blue-500 mb-4">Card Content Area Classes</h2>
+
+            <div class="mb-4">
+                <h3 class="text-lg font-medium text-gray-100">px-6</h3>
+                <p class="text-gray-400">Adds horizontal padding (left and right).</p>
+                <div class="example-box px-6 bg-gray-800 p-4 mt-2">Horizontal padding</div>
+                <!-- Example: Horizontal padding -->
+                <!-- px-6: 1.5rem horizontal padding -->
+                <!-- bg-gray-800: Dark gray background -->
+                <!-- p-4: Other padding -->
+                <!-- mt-2: Top margin -->
+            </div>
+
+            <div class="mb-4">
+                <h3 class="text-lg font-medium text-gray-100">py-4</h3>
+                <p class="text-gray-400">Adds vertical padding (top and bottom).</p>
+                <div class="example-box py-4 bg-gray-800 p-4 mt-2">Vertical padding</div>
+                <!-- Example: Vertical padding -->
+                <!-- py-4: 1rem vertical padding -->
+                <!-- bg-gray-800: Dark gray background -->
+                <!-- p-4: Other padding -->
+                <!-- mt-2: Top margin -->
+            </div>
+        </div>
+
+        <!-- Time Ago Text Classes -->
+        <div class="cheatsheet-section">
+            <h2 class="text-xl font-semibold text-blue-500 mb-4">Time Ago Text Classes</h2>
+
+            <div class="mb-4">
+                <h3 class="text-lg font-medium text-gray-100">text-gray-500</h3>
+                <p class="text-gray-400">Sets the text color to a medium gray.</p>
+                <div class="example-box p-4 mt-2">
+                    <span class="text-gray-500">Medium gray text</span>
+                </div>
+                <!-- Example: Gray text -->
+                <!-- text-gray-500: Medium gray -->
+                <!-- p-4: Padding -->
+                <!-- mt-2: Top margin -->
+            </div>
+
+            <div class="mb-4">
+                <h3 class="text-lg font-medium text-gray-100">text-xs</h3>
+                <p class="text-gray-400">Sets the font size to extra small.</p>
+                <div class="example-box p-4 mt-2">
+                    <span class="text-xs">Extra small text</span>
+                </div>
+                <!-- Example: Small text -->
+                <!-- text-xs: Extra small font -->
+                <!-- p-4: Padding -->
+                <!-- mt-2: Top margin -->
+            </div>
+
+            <div class="mb-4">
+                <h3 class="text-lg font-medium text-gray-100">mb-2</h3>
+                <p class="text-gray-400">Adds a small margin to the bottom.</p>
+                <div class="example-box p-4 mt-2">
+                    <div class="mb-2 bg-blue-500 p-2">Text with bottom margin</div>
+                    <div class="bg-blue-500 p-2">Next element</div>
+                </div>
+                <!-- Example: Bottom margin -->
+                <!-- mb-2: Small bottom margin -->
+                <!-- bg-blue-500: Blue background -->
+                <!-- p-4: Padding -->
+                <!-- mt-2: Top margin -->
+            </div>
+        </div>
+
+        <!-- Post Title Classes -->
+        <div class="cheatsheet-section">
+            <h2 class="text-xl font-semibold text-blue-500 mb-4">Post Title Classes</h2>
+
+            <div class="mb-4">
+                <h3 class="text-lg font-medium text-gray-100">font-bold</h3>
+                <p class="text-gray-400">Applies a bold font weight.</p>
+                <div class="example-box p-4 mt-2">
+                    <span class="font-bold">Bold text</span>
+                </div>
+                <!-- Example: Bold text -->
+                <!-- font-bold: Bold weight -->
+                <!-- p-4: Padding -->
+                <!-- mt-2: Top margin -->
+            </div>
+
+            <div class="mb-4">
+                <h3 class="text-lg font-medium text-gray-100">text-xl</h3>
+                <p class="text-gray-400">Sets the font size to extra large.</p>
+                <div class="example-box p-4 mt-2">
+                    <span class="text-xl">Extra large text</span>
+                </div>
+                <!-- Example: Large text -->
+                <!-- text-xl: Extra large font -->
+                <!-- p-4: Padding -->
+                <!-- mt-2: Top margin -->
+            </div>
+
+            <!-- mb-2 and text-gray-900 already covered -->
+        </div>
+
+        <!-- Post Description Classes -->
+        <div class="cheatsheet-section">
+            <h2 class="text-xl font-semibold text-blue-500 mb-4">Post Description Classes</h2>
+
+            <div class="mb-4">
+                <h3 class="text-lg font-medium text-gray-100">text-gray-700</h3>
+                <p class="text-gray-400">Sets the text color to a standard gray.</p>
+                <div class="example-box p-4 mt-2">
+                    <span class="text-gray-700">Standard gray text</span>
+                </div>
+                <!-- Example: Gray text -->
+                <!-- text-gray-700: Standard gray -->
+                <!-- p-4: Padding -->
+                <!-- mt-2: Top margin -->
+            </div>
+
+            <div class="mb-4">
+                <h3 class="text-lg font-medium text-gray-100">text-sm</h3>
+                <p class="text-gray-400">Sets the font size to small.</p>
+                <div class="example-box p-4 mt-2">
+                    <span class="text-sm">Small text</span>
+                </div>
+                <!-- Example: Small text -->
+                <!-- text-sm: Small font -->
+                <!-- p-4: Padding -->
+                <!-- mt-2: Top margin -->
+            </div>
+        </div>
+
+        <!-- Card Stats Footer Classes -->
+        <div class="cheatsheet-section">
+            <h2 class="text-xl font-semibold text-blue-500 mb-4">Card Stats Footer Classes</h2>
+
+            <div class="mb-4">
+                <h3 class="text-lg font-medium text-gray-100">pt-4 pb-4</h3>
+                <p class="text-gray-400">Adds padding to the top and bottom respectively.</p>
+                <div class="example-box pt-4 pb-4 bg-gray-800 p-4 mt-2">Top and bottom padding</div>
+                <!-- Example: Vertical padding -->
+                <!-- pt-4: Top padding -->
+                <!-- pb-4: Bottom padding -->
+                <!-- bg-gray-800: Dark gray background -->
+                <!-- p-4: Other padding -->
+                <!-- mt-2: Top margin -->
+            </div>
+
+            <div class="mb-4">
+                <h3 class="text-lg font-medium text-gray-100">bg-pink-500</h3>
+                <p class="text-gray-400">Sets the background color to pink (also: bg-orange-500, bg-green-500).</p>
+                <div class="example-box bg-red-500 text-white p-4 mt-2">Red background (updated to match logo theme)
+                </div>
+                <!-- Example: Red background (updated from pink to match logo) -->
+                <!-- bg-red-500: Red background matching logo -->
+                <!-- text-white: White text -->
+                <!-- p-4: Padding -->
+                <!-- mt-2: Top margin -->
+            </div>
+
+            <div class="mb-4">
+                <h3 class="text-lg font-medium text-gray-100">text-white</h3>
+                <p class="text-gray-400">Sets the text color to white.</p>
+                <div class="example-box bg-gray-800 text-white p-4 mt-2">White text</div>
+                <!-- Example: White text -->
+                <!-- text-white: White text -->
+                <!-- bg-gray-800: Dark background -->
+                <!-- p-4: Padding -->
+                <!-- mt-2: Top margin -->
+            </div>
+
+            <div class="mb-4">
+                <h3 class="text-lg font-medium text-gray-100">justify-between</h3>
+                <p class="text-gray-400">Distributes space between flex items.</p>
+                <div class="example-box flex justify-between p-4 mt-2">
+                    <div class="bg-blue-500 p-2">Left</div>
+                    <div class="bg-blue-500 p-2">Right</div>
+                </div>
+                <!-- Example: Spaced flex items -->
+                <!-- flex: Enables Flexbox -->
+                <!-- justify-between: Spaces items -->
+                <!-- p-4: Padding -->
+                <!-- bg-blue-500: Blue background -->
+                <!-- mt-2: Top margin -->
+            </div>
+
+            <div class="mb-4">
+                <h3 class="text-lg font-medium text-gray-100">rounded-b-lg</h3>
+                <p class="text-gray-400">Applies large rounded corners only to the bottom.</p>
+                <div class="example-box rounded-b-lg bg-gray-800 p-4 mt-2">Bottom rounded corners</div>
+                <!-- Example: Bottom rounded -->
+                <!-- rounded-b-lg: Bottom rounded corners -->
+                <!-- bg-gray-800: Dark gray background -->
+                <!-- p-4: Padding -->
+                <!-- mt-2: Top margin -->
+            </div>
+        </div>
+
+        <!-- Individual Stats Classes -->
+        <div class="cheatsheet-section">
+            <h2 class="text-xl font-semibold text-blue-500 mb-4">Individual Stats Classes</h2>
+
+            <div class="mb-4">
+                <h3 class="text-lg font-medium text-gray-100">text-center</h3>
+                <p class="text-gray-400">Centers the text within the element.</p>
+                <div class="example-box p-4 mt-2">
+                    <div class="text-center">Centered text</div>
+                </div>
+                <!-- Example: Centered text -->
+                <!-- text-center: Centers text -->
+                <!-- p-4: Padding -->
+                <!-- mt-2: Top margin -->
+            </div>
+
+            <div class="mb-4">
+                <h3 class="text-lg font-medium text-gray-100">font-semibold</h3>
+                <p class="text-gray-400">Applies a semi-bold font weight.</p>
+                <div class="example-box p-4 mt-2">
+                    <span class="font-semibold">Semi-bold text</span>
+                </div>
+                <!-- Example: Semi-bold text -->
+                <!-- font-semibold: Semi-bold weight -->
+                <!-- p-4: Padding -->
+                <!-- mt-2: Top margin -->
+            </div>
+
+            <div class="mb-4">
+                <h3 class="text-lg font-medium text-gray-100">text-lg</h3>
+                <p class="text-gray-400">Sets the font size to large.</p>
+                <div class="example-box p-4 mt-2">
+                    <span class="text-lg">Large text</span>
+                </div>
+                <!-- Example: Large text -->
+                <!-- text-lg: Large font -->
+                <!-- p-4: Padding -->
+                <!-- mt-2: Top margin -->
+            </div>
+
+            <div class="mb-4">
+                <h3 class="text-lg font-medium text-gray-100">opacity-75</h3>
+                <p class="text-gray-400">Makes the element slightly transparent.</p>
+                <div class="example-box p-4 mt-2">
+                    <span class="opacity-75">Slightly transparent text</span>
+                </div>
+                <!-- Example: Transparent text -->
+                <!-- opacity-75: 75% opacity -->
+                <!-- p-4: Padding -->
+                <!-- mt-2: Top margin -->
+            </div>
+
+            <div class="mb-4">
+                <h3 class="text-lg font-medium text-gray-100">uppercase</h3>
+                <p class="text-gray-400">Transforms the text to uppercase.</p>
+                <div class="example-box p-4 mt-2">
+                    <span class="uppercase">uppercase text</span>
+                </div>
+                <!-- Example: Uppercase text -->
+                <!-- uppercase: Transforms to uppercase -->
+                <!-- p-4: Padding -->
+                <!-- mt-2: Top margin -->
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
