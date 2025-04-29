@@ -23,11 +23,8 @@ The cheatsheet is implemented as a single HTML file (`index.html`) that uses Tai
 ## Setup Instructions
 
 1. **Clone or Download**: Obtain the project files by cloning the repository or downloading the `index.html` file.
-2. **Replace Assets**:
-   - Update the `<img src="logo.png">` path in `index.html` to point to the actual Dented Code Academy logo.
-   - Update the `<img src="bg.jpg">` paths to point to actual image files for demonstrations.
-3. **Open in Browser**: Open `index.html` in a web browser. The Tailwind CSS library is loaded via CDN (`https://cdn.tailwindcss.com`), so no additional setup is required.
-4. **Optional Local Hosting**: For development or testing, serve the file using a local server (e.g., `live-server` or a simple Python server: `python -m http.server`).
+2. **Open in Browser**: Open `index.html` in a web browser. The Tailwind CSS library is loaded via CDN (`https://cdn.tailwindcss.com`), so no additional setup is required.
+3. **Optional Local Hosting**: For development or testing, serve the file using a local server (e.g., `live-server` or a simple Python server: `python -m http.server`).
 
 ## Usage
 
