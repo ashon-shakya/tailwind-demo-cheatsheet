@@ -1,0 +1,329 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Tailwind CSS Basic Guide</title>
+    <style>
+        /* Optional: Basic custom styles if needed, but we'll try to stick to Tailwind */
+        body {
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+    </style>
+</head>
+
+<body class="bg-gray-100 p-8">
+
+    <div class="max-w-4xl mx-auto bg-white p-6 rounded-lg shadow-xl">
+        <h1 class="text-4xl font-extrabold text-center text-blue-700 mb-8">
+            Tailwind CSS Basic Utility Guide
+        </h1>
+
+        <section class="mb-10">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4 border-b-2 pb-2 border-blue-200">
+                Core Concepts
+            </h2>
+
+            <div class="mb-6 p-4 border border-gray-300 rounded-md bg-gray-50">
+                <h3 class="text-xl font-medium text-gray-700 mb-2">1. Styling with Utility Classes</h3>
+                <p class="text-gray-600 mb-2">Apply classes directly in HTML to style elements.</p>
+                <button
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md transition duration-300">
+                    Click Me (bg-blue-500 hover:bg-blue-700 text-white font-bold p-2 px-4 rounded-md)
+                </button>
+                <p class="text-sm text-gray-600 mt-2">
+                    <code class="bg-gray-200 p-1 rounded">bg-blue-500</code> (background color), <code
+                        class="bg-gray-200 p-1 rounded">text-white</code> (text color), <code
+                        class="bg-gray-200 p-1 rounded">font-bold</code> (font weight), <code
+                        class="bg-gray-200 p-1 rounded">py-2 px-4</code> (vertical/horizontal padding), <code
+                        class="bg-gray-200 p-1 rounded">rounded-md</code> (border-radius).
+                </p>
+            </div>
+
+            <div class="mb-6 p-4 border border-gray-300 rounded-md bg-gray-50">
+                <h3 class="text-xl font-medium text-gray-700 mb-2">2. Hover, Focus, and Other States</h3>
+                <p class="text-gray-600 mb-2">Use prefixes to apply styles based on element states.</p>
+                <button
+                    class="bg-green-500 hover:bg-green-700 focus:ring focus:ring-green-300 text-white font-bold py-2 px-4 rounded-md transition duration-300">
+                    Hover/Focus Me
+                </button>
+                <input type="text" placeholder="Focus on me"
+                    class="mt-4 p-2 border border-gray-300 focus:border-blue-500 focus:ring focus:ring-blue-200 rounded-md outline-none transition duration-300">
+                <p class="text-sm text-gray-600 mt-2">
+                    <code class="bg-gray-200 p-1 rounded">hover:bg-green-700</code>, <code
+                        class="bg-gray-200 p-1 rounded">focus:ring</code>, <code
+                        class="bg-gray-200 p-1 rounded">focus:border-blue-500</code>.
+                </p>
+            </div>
+
+            <div class="mb-6 p-4 border border-gray-300 rounded-md bg-gray-50">
+                <h3 class="text-xl font-medium text-gray-700 mb-2">3. Responsive Design</h3>
+                <p class="text-gray-600 mb-2">Apply different styles for various screen sizes using prefixes (e.g., sm:,
+                    md:, lg:).</p>
+                <div class="p-4 bg-purple-200 text-purple-800 text-center text-sm sm:text-base md:text-lg lg:text-xl">
+                    Resize window to see text size change.
+                </div>
+                <p class="text-sm text-gray-600 mt-2">
+                    <code class="bg-gray-200 p-1 rounded">text-sm</code>, <code
+                        class="bg-gray-200 p-1 rounded">sm:text-base</code>, <code
+                        class="bg-gray-200 p-1 rounded">md:text-lg</code>, <code
+                        class="bg-gray-200 p-1 rounded">lg:text-xl</code>.
+                </p>
+            </div>
+
+            <div class="mb-6 p-4 border border-gray-300 rounded-md bg-gray-50">
+                <h3 class="text-xl font-medium text-gray-700 mb-2">4. Dark Mode</h3>
+                <p class="text-gray-600 mb-2">Use `dark:` prefix for styles that apply in dark mode.</p>
+                <div class="p-4 bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-100 rounded-md">
+                    This content changes in Dark Mode (if enabled by system/config).
+                </div>
+                <p class="text-sm text-gray-600 mt-2">
+                    <code class="bg-gray-200 p-1 rounded">dark:bg-gray-900</code>, <code
+                        class="bg-gray-200 p-1 rounded">dark:text-gray-100</code>.
+                </p>
+            </div>
+
+            <div class="mb-6 p-4 border border-gray-300 rounded-md bg-gray-50">
+                <h3 class="text-xl font-medium text-gray-700 mb-2">5. Colors</h3>
+                <p class="text-gray-600 mb-2">Access a consistent color palette for text, backgrounds, and borders.</p>
+                <div class="flex space-x-4">
+                    <div class="p-3 bg-blue-500 text-white rounded-md text-sm">Blue 500</div>
+                    <div class="p-3 bg-green-200 text-green-900 rounded-md text-sm">Green 200</div>
+                    <div class="p-3 border border-red-400 text-red-700 rounded-md text-sm">Border Red 400</div>
+                </div>
+                <p class="text-sm text-gray-600 mt-2">
+                    <code class="bg-gray-200 p-1 rounded">bg-{color}-{shade}</code>, <code
+                        class="bg-gray-200 p-1 rounded">text-{color}-{shade}</code>, <code
+                        class="bg-gray-200 p-1 rounded">border-{color}-{shade}</code>.
+                </p>
+            </div>
+
+        </section>
+
+        <section class="mb-10">
+            <h2 class="text-2xl font-semibold text-gray-800 mb-4 border-b-2 pb-2 border-blue-200">
+                Practical Examples
+            </h2>
+
+            <div class="mb-6 p-4 border border-gray-300 rounded-md bg-gray-50">
+                <h3 class="text-xl font-medium text-gray-700 mb-2">1. Layout: Flexbox & Grid</h3>
+                <p class="text-gray-600 mb-2">Control element arrangement with Flexbox and Grid utilities.</p>
+
+                <p class="text-base font-semibold mb-2">Flexbox Examples:</p>
+                <div
+                    class="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 mb-4 border border-dashed p-2">
+                    <div
+                        class="w-full md:w-1/2 p-4 bg-blue-100 rounded-md shadow-sm flex items-center justify-center h-20">
+                        <p class="text-blue-800 font-medium">Flex Item 1</p>
+                    </div>
+                    <div
+                        class="w-full md:w-1/2 p-4 bg-green-100 rounded-md shadow-sm flex items-center justify-center h-20">
+                        <p class="text-green-800 font-medium">Flex Item 2</p>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-600 mt-2">
+                    <code class="bg-gray-200 p-1 rounded">flex</code>, <code
+                        class="bg-gray-200 p-1 rounded">flex-col</code>, <code
+                        class="bg-gray-200 p-1 rounded">md:flex-row</code> (responsive direction).
+                </p>
+                <p class="text-base font-semibold mb-2 mt-4">Grid Examples:</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4 border border-dashed p-2">
+                    <div class="p-4 bg-yellow-100 rounded-md shadow-sm flex items-center justify-center h-20">
+                        <p class="text-yellow-800 font-medium">Grid Item A</p>
+                    </div>
+                    <div class="p-4 bg-red-100 rounded-md shadow-sm flex items-center justify-center h-20">
+                        <p class="text-red-800 font-medium">Grid Item B</p>
+                    </div>
+                    <div
+                        class="col-span-1 md:col-span-2 p-4 bg-indigo-100 rounded-md shadow-sm flex items-center justify-center h-20">
+                        <p class="text-indigo-800 font-medium">Grid Item C (Spans 2 cols on MD+)</p>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-600 mt-2">
+                    <code class="bg-gray-200 p-1 rounded">grid</code>, <code
+                        class="bg-gray-200 p-1 rounded">grid-cols-2</code>, <code
+                        class="bg-gray-200 p-1 rounded">gap-4</code>, <code
+                        class="bg-gray-200 p-1 rounded">col-span-2</code>.
+                </p>
+            </div>
+
+            <div class="mb-6 p-4 border border-gray-300 rounded-md bg-gray-50">
+                <h3 class="text-xl font-medium text-gray-700 mb-2">2. Spacing (Margin & Padding)</h3>
+                <p class="text-gray-600 mb-2">Control external and internal space around elements.</p>
+                <div class="border border-gray-400 p-4 rounded-md">
+                    <div class="bg-blue-200 p-6 m-4 text-blue-900 font-medium">
+                        This div has <code class="bg-blue-100 px-1 rounded">p-6</code> (padding all sides) and <code
+                            class="bg-blue-100 px-1 rounded">m-4</code> (margin all sides).
+                    </div>
+                    <div class="bg-green-200 pt-8 pb-2 px-10 mt-6 text-green-900 font-medium">
+                        This div has <code class="bg-green-100 px-1 rounded">pt-8</code>, <code
+                            class="bg-green-100 px-1 rounded">pb-2</code>, <code
+                            class="bg-green-100 px-1 rounded">px-10</code> and <code
+                            class="bg-green-100 px-1 rounded">mt-6</code>.
+                    </div>
+                    <div class="bg-purple-200 mx-auto w-1/2 p-3 text-purple-900 font-medium mt-4">
+                        This div is centered with <code class="bg-purple-100 px-1 rounded">mx-auto</code>.
+                    </div>
+                </div>
+                <p class="text-sm text-gray-600 mt-2">
+                    <code class="bg-gray-200 p-1 rounded">p-{size}</code>, <code
+                        class="bg-gray-200 p-1 rounded">m-{size}</code> for all sides. <code
+                        class="bg-gray-200 p-1 rounded">pt</code>, <code class="bg-gray-200 p-1 rounded">pb</code>,
+                    <code class="bg-gray-200 p-1 rounded">pl</code>, <code class="bg-gray-200 p-1 rounded">pr</code> for
+                    specific sides. <code class="bg-gray-200 p-1 rounded">px</code> (x-axis), <code
+                        class="bg-gray-200 p-1 rounded">py</code> (y-axis).
+                </p>
+            </div>
+
+            <div class="mb-6 p-4 border border-gray-300 rounded-md bg-gray-50">
+                <h3 class="text-xl font-medium text-gray-700 mb-2">3. Sizing (Width & Height)</h3>
+                <p class="text-gray-600 mb-2">Control element dimensions using a consistent scale.</p>
+                <div class="flex space-x-4 items-end mb-4">
+                    <div
+                        class="w-24 h-24 bg-indigo-300 flex items-center justify-center text-indigo-900 font-medium rounded-md">
+                        w-24 h-24
+                    </div>
+                    <div
+                        class="w-32 h-16 bg-purple-300 flex items-center justify-center text-purple-900 font-medium rounded-md">
+                        w-32 h-16
+                    </div>
+                    <div
+                        class="w-1/3 h-20 bg-pink-300 flex items-center justify-center text-pink-900 font-medium rounded-md">
+                        w-1/3 h-20
+                    </div>
+                </div>
+                <img src="https://allroundclub.com/blog/wp-content/uploads/2021/10/how-to-draw-pikachu.png"
+                    alt="Placeholder Image" class="w-full h-auto max-w-sm rounded-md border border-gray-300">
+                <p class="text-sm text-gray-600 mt-2">
+                    <code class="bg-gray-200 p-1 rounded">w-{size}</code>, <code
+                        class="bg-gray-200 p-1 rounded">h-{size}</code> for fixed sizes or fractions. <code
+                        class="bg-gray-200 p-1 rounded">w-full</code>, <code
+                        class="bg-gray-200 p-1 rounded">h-auto</code>, <code
+                        class="bg-gray-200 p-1 rounded">max-w-sm</code>.
+                </p>
+            </div>
+
+            <div class="mb-6 p-4 border border-gray-300 rounded-md bg-gray-50">
+                <h3 class="text-xl font-medium text-gray-700 mb-2">4. Typography</h3>
+                <p class="text-gray-600 mb-2">Style text appearance with ease.</p>
+                <p class="text-xs text-gray-500 mb-1">Extra Small Text</p>
+                <p class="text-base text-gray-700 font-semibold mb-1">Base Text with Semibold Font</p>
+                <p class="text-2xl font-bold italic text-blue-600 mb-1">2XL Bold Italic Blue Text</p>
+                <p class="underline decoration-red-500 text-purple-700 leading-relaxed text-center mb-1">Underlined,
+                    Centered Text with Relaxed Line-height</p>
+                <p class="text-sm text-gray-600 mt-2">
+                    <code class="bg-gray-200 p-1 rounded">text-{size}</code>, <code
+                        class="bg-gray-200 p-1 rounded">font-{weight}</code>, <code
+                        class="bg-gray-200 p-1 rounded">italic</code>, <code
+                        class="bg-gray-200 p-1 rounded">underline</code>, <code
+                        class="bg-gray-200 p-1 rounded">leading-{size}</code>, <code
+                        class="bg-gray-200 p-1 rounded">text-{align}</code>.
+                </p>
+            </div>
+
+            <div class="mb-6 p-4 border border-gray-300 rounded-md bg-gray-50">
+                <h3 class="text-xl font-medium text-gray-700 mb-2">5. Backgrounds</h3>
+                <p class="text-gray-600 mb-2">Apply colors, gradients, and images to backgrounds.</p>
+                <div class="flex flex-wrap gap-4 mb-4">
+                    <div class="w-32 h-20 bg-red-500 text-white flex items-center justify-center rounded-md">Solid Red
+                    </div>
+                    <div
+                        class="w-32 h-20 bg-gradient-to-r from-purple-400 to-pink-500 text-white flex items-center justify-center rounded-md">
+                        Gradient</div>
+                    <div class="w-32 h-20 bg-cover bg-center rounded-md"
+                        style="background-image: url('https://via.placeholder.com/150/0000FF/FFFFFF?text=BG');">
+                        <span class="text-white text-sm font-semibold text-shadow-md">Image BG</span>
+                    </div>
+                </div>
+                <p class="text-sm text-gray-600 mt-2">
+                    <code class="bg-gray-200 p-1 rounded">bg-{color}-{shade}</code>, <code
+                        class="bg-gray-200 p-1 rounded">bg-gradient-to-r</code>, <code
+                        class="bg-gray-200 p-1 rounded">from-{color}</code>, <code
+                        class="bg-gray-200 p-1 rounded">to-{color}</code>, <code
+                        class="bg-gray-200 p-1 rounded">bg-cover</code>, <code
+                        class="bg-gray-200 p-1 rounded">bg-center</code>.
+                </p>
+            </div>
+
+            <div class="mb-6 p-4 border border-gray-300 rounded-md bg-gray-50">
+                <h3 class="text-xl font-medium text-gray-700 mb-2">6. Tables</h3>
+                <p class="text-gray-600 mb-2">Structure and style tabular data effectively.</p>
+                <div class="overflow-x-auto">
+                    <table class="min-w-full divide-y divide-gray-200 mt-4 border border-collapse">
+                        <thead class="bg-gray-50">
+                            <tr>
+                                <th
+                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Name</th>
+                                <th
+                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Role</th>
+                                <th
+                                    class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                                    Status</th>
+                            </tr>
+                        </thead>
+                        <tbody class="bg-white divide-y divide-gray-200">
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">Jane Doe</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Developer</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm">
+                                    <span
+                                        class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800">
+                                        Active
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">John Smith
+                                </td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Designer</td>
+                                <td class="px-6 py-4 whitespace-nowrap text-sm">
+                                    <span
+                                        class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800">
+                                        Pending
+                                    </span>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="text-sm text-gray-600 mt-2">
+                    <code class="bg-gray-200 p-1 rounded">min-w-full</code>, <code
+                        class="bg-gray-200 p-1 rounded">divide-y</code>, <code
+                        class="bg-gray-200 p-1 rounded">px-6 py-3</code>, <code
+                        class="bg-gray-200 p-1 rounded">text-left</code>, <code
+                        class="bg-gray-200 p-1 rounded">hover:bg-gray-50</code>.
+                </p>
+            </div>
+
+            <div class="mb-6 p-4 border border-gray-300 rounded-md bg-gray-50">
+                <h3 class="text-xl font-medium text-gray-700 mb-2">7. Transitions & Animations</h3>
+                <p class="text-gray-600 mb-2">Add smooth visual effects to property changes.</p>
+                <button
+                    class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-md transition duration-300 ease-in-out transform hover:scale-110">
+                    Scale on Hover
+                </button>
+                <div
+                    class="w-24 h-12 bg-red-400 rounded-md flex items-center justify-center mt-4 transition-all duration-700 ease-in-out transform hover:translate-x-full">
+                    <span class="text-white text-sm">Translate</span>
+                </div>
+                <p class="text-sm text-gray-600 mt-2">
+                    <code class="bg-gray-200 p-1 rounded">transition</code>, <code
+                        class="bg-gray-200 p-1 rounded">duration-300</code>, <code
+                        class="bg-gray-200 p-1 rounded">ease-in-out</code>, <code
+                        class="bg-gray-200 p-1 rounded">transform</code>, <code
+                        class="bg-gray-200 p-1 rounded">hover:scale-110</code>, <code
+                        class="bg-gray-200 p-1 rounded">hover:translate-x-full</code>.
+                </p>
+            </div>
+
+        </section>
+
+    </div>
+
+</body>
+
+</html>
